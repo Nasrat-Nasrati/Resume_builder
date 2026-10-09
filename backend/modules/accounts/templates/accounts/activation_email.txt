@@ -1,0 +1,8 @@
+Hello {{ first_name }},
+
+Thanks for creating a KabulCV account. Set your password and activate your account using this one-time link:
+{{ activation_url }}
+
+This link expires after 24 hours. Your phone number is not verified by this process.
+
+If you did not request this account, you can ignore this message.

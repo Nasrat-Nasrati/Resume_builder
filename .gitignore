@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+coverage.xml
+htmlcov/
+
+# Django/runtime data
+*.log
+/backend/staticfiles/
+/backend/media/
+/storage/
+
+# Node
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated artifacts
+*.pdf
+*.docx
+*.sqlite3

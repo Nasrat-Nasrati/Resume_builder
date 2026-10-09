@@ -1,0 +1,5 @@
+import type { ReactNode } from 'react';
+import type { Language } from './i18n';
+import { rt } from './resumeCopy';
+export type WorkspaceProps={language:Language;onLanguageChange:(value:Language)=>void};
+export function Workspace({language,onLanguageChange,children,active='cvs',actions}:{language:Language;onLanguageChange:(value:Language)=>void;children:ReactNode;active?:string;actions?:ReactNode}){return <div className="user-layout" lang={language} dir={language==='en'?'ltr':'rtl'}><aside className="user-sidebar"><a className="brand" href="/dashboard">Kabul<span>CV</span></a><nav>{['dashboard','cvs','profile','templates','settings'].map(key=><a key={key} className={active===key?'selected':''} href={`/${key}`}>{rt(language,key)}</a>)}</nav></aside><section className="user-content"><header className="user-topbar"><select aria-label="Interface language" value={language} onChange={e=>onLanguageChange(e.target.value as Language)}><option value="en">English</option><option value="fa">دری</option><option value="ps">پښتو</option></select>{actions}</header><main>{children}</main></section></div>}
